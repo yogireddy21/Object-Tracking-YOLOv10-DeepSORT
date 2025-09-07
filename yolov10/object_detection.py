@@ -5,7 +5,7 @@ import time
 from ultralytics import YOLOv10
 
 #Create a Video Capture Object
-cap = cv2.VideoCapture("Resources/video3.mp4")
+cap = cv2.VideoCapture("Resources/video4.mp4")
 model = YOLOv10("weights/yolov10n.pt")
 cocoClassNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat","traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat","dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat","baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup","fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli","carrot", "hot dog", "pizza", "donut", "cake", "chair", "sofa", "pottedplant", "bed","diningtable", "toilet", "tvmonitor", "laptop", "mouse", "remote", "keyboard", "cell phone","microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors","teddy bear", "hair drier", "toothbrush"]
 ctime = 0
@@ -38,6 +38,6 @@ while True:
         cv2.putText(frame, f"Frame Count: {str(count)}", (10, 100), cv2.FONT_HERSHEY_PLAIN, 3, (255,0,255), 3)
         cv2.imshow("Frame", frame)
         if cv2.waitKey(1) & 0xFF == ord('1'):
-            break
+            break0
     else:
         break
